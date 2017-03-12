@@ -1,0 +1,762 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="蟒蛇," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x6210;&amp;#x5458;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; in ;  &amp;#x903B;&amp;#x8F91;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; and or ;  &amp;#x6BD4;&amp;#x8F83;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; &amp;gt; &amp;lt; ;  &amp;#x91CD;&amp;#x590D;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; * ;
+&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python小甲鱼笔记之一">
+<meta property="og:url" content="http://yoursite.com/2017/03/12/python小甲鱼笔记之一/index.html">
+<meta property="og:site_name" content="码农的自我修养">
+<meta property="og:description" content="&amp;#x6210;&amp;#x5458;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; in ;  &amp;#x903B;&amp;#x8F91;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; and or ;  &amp;#x6BD4;&amp;#x8F83;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; &amp;gt; &amp;lt; ;  &amp;#x91CD;&amp;#x590D;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; * ;
+&amp;#x">
+<meta property="og:updated_time" content="2017-03-12T13:32:39.676Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python小甲鱼笔记之一">
+<meta name="twitter:description" content="&amp;#x6210;&amp;#x5458;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; in ;  &amp;#x903B;&amp;#x8F91;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; and or ;  &amp;#x6BD4;&amp;#x8F83;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; &amp;gt; &amp;lt; ;  &amp;#x91CD;&amp;#x590D;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26; * ;
+&amp;#x">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6330021304485283000',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/12/python小甲鱼笔记之一/"/>
+
+
+  <title> python小甲鱼笔记之一 | 码农的自我修养 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">码农的自我修养</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Coder-Self-Train</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            日程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '4ZSxnAkTdxqWnsxa6jgK','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                python小甲鱼笔记之一
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-12T21:25:52+08:00" content="2017-03-12">
+              2017-03-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/12/python小甲鱼笔记之一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/python小甲鱼笔记之一/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+	
+    <span class="post-visit-count">
+      &nbsp; | &nbsp; 
+      <!--眼睛图标-->
+      <i class="fa fa-eye"></i>&nbsp;
+      <span id="detail_cnt">1</span>
+    </span>
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&#x6210;&#x5458;&#x64CD;&#x4F5C;&#x7B26; in ;  &#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26; and or ;  &#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26; &gt; &lt; ;  &#x91CD;&#x590D;&#x64CD;&#x4F5C;&#x7B26; * ;</p>
+<p>&#x8FED;&#x4EE3;&#x662F;&#x80FD;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5E76;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x503C;&#x7684;&#x8FC7;&#x7A0B;, &#x57FA;&#x672C;&#x7B49;&#x540C;&#x4E8E;for&#x5FAA;&#x73AF;&#x3002; <a id="more"></a></p>
+<h2 id="&#x5217;&#x8868;"><a href="#&#x5217;&#x8868;" class="headerlink" title="&#x5217;&#x8868;"></a>&#x5217;&#x8868;</h2><h3 id="&#x901A;&#x8FC7;&#x4E0E;&#x901A;&#x8FC7;&#x5207;&#x7247;&#x8D4B;&#x503C;&#x4E0D;&#x540C;&#x524D;&#x8005;&#x53EA;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x6307;&#x5411;"><a href="#&#x901A;&#x8FC7;-&#x4E0E;&#x901A;&#x8FC7;&#x5207;&#x7247;&#x8D4B;&#x503C;&#x4E0D;&#x540C;&#xFF0C;&#x524D;&#x8005;&#x53EA;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x6307;&#x5411;&#x3002;" class="headerlink" title="&#x901A;&#x8FC7;=&#x4E0E;&#x901A;&#x8FC7;&#x5207;&#x7247;&#x8D4B;&#x503C;&#x4E0D;&#x540C;&#xFF0C;&#x524D;&#x8005;&#x53EA;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x6307;&#x5411;&#x3002;"></a>&#x901A;&#x8FC7;<code>=</code>&#x4E0E;&#x901A;&#x8FC7;&#x5207;&#x7247;&#x8D4B;&#x503C;&#x4E0D;&#x540C;&#xFF0C;&#x524D;&#x8005;&#x53EA;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x6307;&#x5411;&#x3002;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; l1 = [1,2,3]</div><div class="line">&gt;&gt;&gt; l2 = l1</div><div class="line">&gt;&gt;&gt; l1.sort(reverse=True)</div><div class="line">&gt;&gt;&gt; l1</div><div class="line">[3, 2, 1]</div><div class="line">&gt;&gt;&gt; l2</div><div class="line">[3, 2, 1]</div></pre></td></tr></table></figure>
+<h2 id="&#x5143;&#x7956;"><a href="#&#x5143;&#x7956;" class="headerlink" title="&#x5143;&#x7956;"></a>&#x5143;&#x7956;</h2><h3 id="&#x8D4B;&#x503C;&#x9700;&#x6CE8;&#x610F;&#x9017;&#x53F7;&#x662F;&#x5173;&#x952E;"><a href="#&#x8D4B;&#x503C;&#x9700;&#x6CE8;&#x610F;&#xFF0C;&#x9017;&#x53F7;&#x662F;&#x5173;&#x952E;" class="headerlink" title="&#x8D4B;&#x503C;&#x9700;&#x6CE8;&#x610F;&#xFF0C;&#x9017;&#x53F7;&#x662F;&#x5173;&#x952E;"></a>&#x8D4B;&#x503C;&#x9700;&#x6CE8;&#x610F;&#xFF0C;&#x9017;&#x53F7;&#x662F;&#x5173;&#x952E;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; t = (1)</div><div class="line">&gt;&gt;&gt; type(t)</div><div class="line">&lt;class &apos;int&apos;&gt;</div><div class="line">&gt;&gt;&gt; s = 1,2,3</div><div class="line">&gt;&gt;&gt; type(s)</div><div class="line">&lt;class &apos;tuple&apos;&gt;</div><div class="line">&#x5143;&#x7956;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#xFF0C;&#x6B63;&#x786E;&#x5199;&#x6CD5;&#x5982;&#x4E0B;</div><div class="line">&gt;&gt;&gt; t = (1,)</div><div class="line">&gt;&gt;&gt; type(t)</div><div class="line">&lt;class &apos;tuple&apos;&gt;</div></pre></td></tr></table></figure>
+<h2 id="&#x5B57;&#x7B26;"><a href="#&#x5B57;&#x7B26;" class="headerlink" title="&#x5B57;&#x7B26;"></a>&#x5B57;&#x7B26;</h2><h3 id="&#x5B57;&#x7B26;&#x4E0D;&#x53EF;&#x6539;&#x53D8;"><a href="#&#x5B57;&#x7B26;&#x4E0D;&#x53EF;&#x6539;&#x53D8;" class="headerlink" title="&#x5B57;&#x7B26;&#x4E0D;&#x53EF;&#x6539;&#x53D8;"></a>&#x5B57;&#x7B26;&#x4E0D;&#x53EF;&#x6539;&#x53D8;</h3><p>join&#x8FDE;&#x63A5;&#x7B26;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; &apos;str&apos;.join(&apos;12345&apos;)</div><div class="line">&apos;1str2str3str4str5&apos;</div></pre></td></tr></table></figure>
+<h2 id="&#x51FD;&#x6570;"><a href="#&#x51FD;&#x6570;" class="headerlink" title="&#x51FD;&#x6570;"></a>&#x51FD;&#x6570;</h2><h3 id="&#x884C;&#x53C2;parameter&#x4E0E;&#x5B9E;&#x53C2;argument"><a href="#&#x884C;&#x53C2;&#xFF08;parameter&#xFF09;&#x4E0E;&#x5B9E;&#x53C2;&#xFF08;argument&#xFF09;" class="headerlink" title="&#x884C;&#x53C2;&#xFF08;parameter&#xFF09;&#x4E0E;&#x5B9E;&#x53C2;&#xFF08;argument&#xFF09;"></a>&#x884C;&#x53C2;&#xFF08;parameter&#xFF09;&#x4E0E;&#x5B9E;&#x53C2;&#xFF08;argument&#xFF09;</h3><p>&#x6536;&#x96C6;&#x53C2;&#x6570; *params&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5173;&#x952E;&#x53C2;&#x6570;&#x7684;&#x8BDD;&#xFF0C;&#x8981;&#x628A;&#x4ED6;&#x653E;&#x524D;&#x9762;</p>
+<p>&#x4E0D;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x3002;</p>
+<h3 id="&#x5185;&#x5D4C;&#x51FD;&#x6570;"><a href="#&#x5185;&#x5D4C;&#x51FD;&#x6570;" class="headerlink" title="&#x5185;&#x5D4C;&#x51FD;&#x6570;"></a>&#x5185;&#x5D4C;&#x51FD;&#x6570;</h3><p>&#x5185;&#x5D4C;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x5728;&#x5185;&#x90E8;&#x4F7F;&#x7528;</p>
+<p>&#x95ED;&#x5305;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def fun(x):</div><div class="line">      def funb(y):</div><div class="line">          return x*y</div><div class="line">      return funb</div><div class="line"></div><div class="line">&gt;&gt;&gt; fun(8)</div><div class="line">&lt;function fun.&lt;locals&gt;.funb at 0x0229C738&gt;</div><div class="line">&gt;&gt;&gt; fun(8)(5)</div><div class="line">40</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def fun():</div><div class="line">	x = 5</div><div class="line">	def funb():</div><div class="line">		 x *= x      ##&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#x5916;&#x90E8;&#x53D8;&#x91CF;</div><div class="line">		 return x</div><div class="line">	return funb()</div><div class="line"></div><div class="line">&gt;&gt;&gt; fun()</div><div class="line">Traceback (most recent call last):</div><div class="line">  File &quot;&lt;pyshell#57&gt;&quot;, line 1, in &lt;module&gt;</div><div class="line">    fun()</div><div class="line">  File &quot;&lt;pyshell#56&gt;&quot;, line 6, in fun</div><div class="line">    return funb()</div><div class="line">  File &quot;&lt;pyshell#56&gt;&quot;, line 4, in funb</div><div class="line">    x *= x</div><div class="line">UnboundLocalError: local variable &apos;x&apos; referenced before assignment</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def fun():</div><div class="line">	x = [5]</div><div class="line">	def funb():</div><div class="line">		 x[0] *= x[0]</div><div class="line">		 return x[0]</div><div class="line">	return funb()</div><div class="line"></div><div class="line">&gt;&gt;&gt; fun()</div><div class="line">25</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def fun():</div><div class="line">	x = 5</div><div class="line">	def funb():</div><div class="line">		nonlocal x   ##nonlocal</div><div class="line">		 x *= x     </div><div class="line">		 return x</div><div class="line">	return funb()</div></pre></td></tr></table></figure>
+<h2 id="&#x5B57;&#x5178;"><a href="#&#x5B57;&#x5178;" class="headerlink" title="&#x5B57;&#x5178;"></a>&#x5B57;&#x5178;</h2><p>&#x5B57;&#x5178;&#x662F;python&#x4E2D;&#x552F;&#x4E00;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;</p>
+<p>&#x5B57;&#x5178;&#x8D4B;&#x503C;&#x65B9;&#x5F0F; <code>dict(([1,&apos;one&apos;],[2,&apos;two&apos;]))</code>,&#x6216;&#x8005;key&#xFF0C;values&#x65B9;&#x5F0F;&#x3002;&#x53C2;&#x6570;&#x4E3A;mapping&#x6216;&#x8005;iteralbe&#xFF0C;&#x53EA;&#x80FD;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x3002;</p>
+<p>&#x5B57;&#x5178;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x521B;&#x5EFA;&#x65B0;&#xFF0C;&#x800C;value&#xFF0C;&#x800C;list&#x4E0D;&#x53EF;&#x4EE5;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; dict.fromkeys(range(32),&apos;&#x8D5E;&apos;)</div><div class="line">{0: &apos;&#x8D5E;&apos;, 1: &apos;&#x8D5E;&apos;, 2: &apos;&#x8D5E;&apos;, 3: &apos;&#x8D5E;&apos;, 4: &apos;&#x8D5E;&apos;, 5: &apos;&#x8D5E;&apos;, 6: &apos;&#x8D5E;&apos;, 7: &apos;&#x8D5E;&apos;, 8: &apos;&#x8D5E;&apos;, 9: &apos;&#x8D5E;&apos;, 10: &apos;&#x8D5E;&apos;, 11: &apos;&#x8D5E;&apos;, 12: &apos;&#x8D5E;&apos;, 13: &apos;&#x8D5E;&apos;, 14: &apos;&#x8D5E;&apos;, 15: &apos;&#x8D5E;&apos;, 16: &apos;&#x8D5E;&apos;, 17: &apos;&#x8D5E;&apos;, 18: &apos;&#x8D5E;&apos;, 19: &apos;&#x8D5E;&apos;, 20: &apos;&#x8D5E;&apos;, 21: &apos;&#x8D5E;&apos;, 22: &apos;&#x8D5E;&apos;, 23: &apos;&#x8D5E;&apos;, 24: &apos;&#x8D5E;&apos;, 25: &apos;&#x8D5E;&apos;, 26: &apos;&#x8D5E;&apos;, 27: &apos;&#x8D5E;&apos;, 28: &apos;&#x8D5E;&apos;, 29: &apos;&#x8D5E;&apos;, 30: &apos;&#x8D5E;&apos;, 31: &apos;&#x8D5E;&apos;}</div></pre></td></tr></table></figure>
+<p>get&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x62A5;KeyError&#x3002;</p>
+<p>&#x6E05;&#x7A7A;&#x5B57;&#x5178;&#x7528;clear(),&#x6BD4;&#x8D4B;&#x7A7A;&#x503C;{}&#x66F4;&#x63A8;&#x8350;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; a = {&apos;name&apos;:&apos;lee&apos;}</div><div class="line">&gt;&gt;&gt; b =a</div><div class="line">&gt;&gt;&gt; a.clear()</div><div class="line">&gt;&gt;&gt; b</div><div class="line">{}</div><div class="line"></div><div class="line"></div><div class="line">&gt;&gt;&gt; a = {&apos;name&apos;:&apos;lee&apos;}</div><div class="line">&gt;&gt;&gt; b =a</div><div class="line">&gt;&gt;&gt; a = {}</div><div class="line">&gt;&gt;&gt; b</div><div class="line">{&apos;name&apos;: &apos;lee&apos;}</div></pre></td></tr></table></figure>
+<p>copy&#x7684;&#x8BDD;&#x4F1A;&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x7684;id&#xFF0C;&#x91CD;&#x65B0;&#x4E00;&#x4EFD;&#x3002;</p>
+<p>pop(key)</p>
+<p>setdefault</p>
+<h2 id="&#x96C6;&#x5408;"><a href="#&#x96C6;&#x5408;" class="headerlink" title="&#x96C6;&#x5408;"></a>&#x96C6;&#x5408;</h2><p><code>{1,2,3,4,5}</code>&#x8868;&#x793A;&#x96C6;&#x5408;</p>
+<p>set&#x53BB;&#x91CD;&#x590D;&#x540E;&#x7684;&#x987A;&#x5E8F;&#x662F;&#x65E0;&#x5E8F;&#x7684;</p>
+<p>frozenset()&#x5DE5;&#x5382;&#x51FD;&#x6570;</p>
+<h2 id="&#x6587;&#x4EF6;"><a href="#&#x6587;&#x4EF6;" class="headerlink" title="&#x6587;&#x4EF6;"></a>&#x6587;&#x4EF6;</h2><p>f.writelines(seq),seq&#x4E3A;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;</p>
+<p>makedirs&#x9012;&#x5F52;&#x521B;&#x5EFA;&#x591A;&#x5C42;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x76EE;&#x5F55;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</p>
+<p>removedirs&#xFF08;path&#xFF09;&#x9012;&#x5F52;&#x5220;&#x9664;&#x76EE;&#x5F55;&#xFF0C;&#x4ECE;&#x5B50;&#x76EE;&#x5F55;&#x5230;&#x7236;&#x76EE;&#x5F55;&#x9010;&#x5C42;&#x5C1D;&#x8BD5;&#x5220;&#x9664;&#xFF0C;&#x76EE;&#x5F55;&#x975E;&#x7A7A;&#x62A5;&#x5F02;&#x5E38;&#x3002;</p>
+<p>os.path&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;getctime &#x3001;getatime&#xFF0C;getmtime&#xFF0C;&#x8FD4;&#x56DE;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x53EF;&#x7528;time.localtime()&#x6216;time.gmtime() &#x4E16;&#x754C;&#x6807;&#x51C6;&#x65F6;&#x8F6C;&#x6362;&#x3001;</p>
+<h2 id="&#x5F02;&#x5E38;"><a href="#&#x5F02;&#x5E38;" class="headerlink" title="&#x5F02;&#x5E38;"></a>&#x5F02;&#x5E38;</h2><p>except OSError as reason,&#x6253;&#x5370;reason&#x65F6;&#x8981;&#x628A;&#x5B83;&#x5F3A;&#x5236;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;</p>
+<p>for&#x548C;while&#x80FD;&#x642D;&#x914D;else&#xFF0C;&#x5F53;&#x5FAA;&#x73AF;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5C31;&#x80FD;&#x600E;&#x6837;&#xFF0C;&#x5E72;&#x4E0D;&#x5B8C;&#x5C31;&#x522B;&#x60F3;&#x600E;&#x6837;</p>
+<h2 id="&#x5B57;&#x7B26;"><a href="#&#x5B57;&#x7B26;-1" class="headerlink" title="&#x5B57;&#x7B26;"></a>&#x5B57;&#x7B26;</h2><p>startswith&#x901A;&#x8FC7;&#xFF08;&#xFF09;&#x8C03;&#x7528;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; &apos;http://google.com&apos;.startswith(&apos;http&apos;)</div><div class="line">True</div><div class="line"># &#x800C;&#x4E0D;&#x662F;&#x4EE5;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#xFF01;</div><div class="line">&gt;&gt;&gt; &apos;http://google.com&apos;.startswith == &apos;http&apos;</div><div class="line">False</div></pre></td></tr></table></figure>
+<h2 id="re"><a href="#re" class="headerlink" title="re"></a>re</h2><p>&#x6709;&#x6B67;&#x4E49;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6700;&#x597D;&#x628A;&#x5404;&#x90E8;&#x5206;&#xFF08;&#xFF09;&#x8D77;&#x6765;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(//|www\.)(\w+)[.] &#x548C; //|www\.(\w+)[.] &#x7684;&#x7ED3;&#x679C;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;</div><div class="line">https://www.cnet.com</div><div class="line">www.xakep.ru</div><div class="line">http://google.com</div></pre></td></tr></table></figure>
+<h2 id="&#x5BF9;&#x8C61;"><a href="#&#x5BF9;&#x8C61;" class="headerlink" title="&#x5BF9;&#x8C61;"></a>&#x5BF9;&#x8C61;</h2><p>&#x5BF9;&#x8C61;&#xFF08;&#x7C7B;&#xFF09; = &#x9759;&#x6001;&#x7684;&#x5C5E;&#x6027; + &#x52A8;&#x6001;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>pass&#x8D77;&#x5360;&#x4F4D;&#x7B26;&#x7684;&#x4F5C;&#x7528;</p>
+<p>&#x591A;&#x6001; &#xFF1A;&#x4E0D;&#x540C;&#x5BF9;&#x8C61;&#x5BF9;&#x540C;&#x4E00;&#x65B9;&#x6CD5;&#x54CD;&#x5E94;&#x4E0D;&#x540C;&#x884C;&#x52A8;</p>
+<p>&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x524D;&#x52A0;&#x4E0A;2&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x5219;&#x901A;&#x8FC7;Class.__attr&#x65E0;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x4F2A;&#x79C1;&#x6709;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; class Person:</div><div class="line">	__name = &apos;&#x5C0F;&#x7532;&#x9C7C;&apos;</div><div class="line">	</div><div class="line">&gt;&gt;&gt; p = Person()</div><div class="line">&gt;&gt;&gt; p._Person__name   # &#x901A;&#x8FC7;_class__attr&#x9690;&#x6027;&#x8BBF;&#x95EE;</div><div class="line">&apos;&#x5C0F;&#x7532;&#x9C7C;&apos;</div></pre></td></tr></table></figure>
+<p>&#x7EC4;&#x5408;&#x662F;&#x6307;&#x628A;&#x51E0;&#x4E2A;&#x6A2A;&#x5411;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#xFF0C;&#x6CA1;&#x6709;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x7684;&#x7C7B;&#x653E;&#x5230;&#x65B0;&#x7C7B;&#x91CC;&#x3002;&#x5728;&#x65B0;&#x7C7B;&#x91CC;&#x901A;&#x8FC7;self.class1 = Class()&#x7EC4;&#x6210;&#x3002;</p>
+<p>&#x5C5E;&#x6027;&#x540D;&#x548C;&#x65B9;&#x6CD5;&#x540D;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x4F1A;&#x51B2;&#x7A81;&#x3002;&#x5C5E;&#x6027;&#x547D;&#x540D;&#x7528;&#x540D;&#x8BCD;&#xFF0C;&#x65B9;&#x6CD5;&#x547D;&#x540D;&#x7528;&#x52A8;&#x8BCD;&#x3002;</p>
+<p>&#x901A;&#x8FC7;<strong>dict</strong>&#x8C03;&#x7528;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/mm_facetoface_collect_qrcode_1474537300307.png" alt="刘义群 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/蟒蛇/" rel="tag">#蟒蛇</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/04/Linux小白教程之通用任务管理器-top/" rel="next" title="Linux小白教程之通用任务管理器--top">
+                <i class="fa fa-chevron-left"></i> Linux小白教程之通用任务管理器--top
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/12/python小甲鱼笔记之一/"
+           data-title="python小甲鱼笔记之一" data-url="http://yoursite.com/2017/03/12/python小甲鱼笔记之一/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="刘义群" />
+          <p class="site-author-name" itemprop="name">刘义群</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">1.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过与通过切片赋值不同前者只是增加了指向"><span class="nav-number">1.1.</span> <span class="nav-text">通过=与通过切片赋值不同，前者只是增加了指向。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元祖"><span class="nav-number">2.</span> <span class="nav-text">元祖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值需注意逗号是关键"><span class="nav-number">2.1.</span> <span class="nav-text">赋值需注意，逗号是关键</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符"><span class="nav-number">3.</span> <span class="nav-text">字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符不可改变"><span class="nav-number">3.1.</span> <span class="nav-text">字符不可改变</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">4.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行参parameter与实参argument"><span class="nav-number">4.1.</span> <span class="nav-text">行参（parameter）与实参（argument）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内嵌函数"><span class="nav-number">4.2.</span> <span class="nav-text">内嵌函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典"><span class="nav-number">5.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">6.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件"><span class="nav-number">7.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常"><span class="nav-number">8.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符"><span class="nav-number">9.</span> <span class="nav-text">字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#re"><span class="nav-number">10.</span> <span class="nav-text">re</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象"><span class="nav-number">11.</span> <span class="nav-text">对象</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘义群</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+<div class="theme-info">
+
+    <script src="/js/firebase.js"></script>
+<script>
+//首先新建自己的firebase对象,使用自己创建应用时给的那个firebase URL
+var firebase = new Firebase("https://coder-self-train-count.firebaseio.com");
+
+//获取当前url作为记录的key，将"/"替换未"_"，并decode
+var curUrl = decodeURI(window.location.pathname.replace(/\/|\./g,"_"));
+
+//获取总数展示
+//这里的意思是获取firebase实例下的`sum`字段值
+firebase.child("sum").on("value",function(data){
+    var curCnt = data.val();
+    if(curCnt > 1){
+        if($("#totalCnt").length){
+            $("#totalCnt").remove();
+        }
+        //我将总量放在了底部，当然位置是随意的
+        $("span.author").append(" | <span id='totalCnt'>总访问量：" + curCnt + "次");
+    }
+});
+
+//获取page明细
+//这里的意思是获取firebase实例下的`page`字段下`cruUrl`key对应的值
+firebase.child("page/" + curUrl).on("value",function(data){
+    var pageCnt = data.val();
+    if(pageCnt > 1){
+        $("#detail_cnt").text(pageCnt);
+    }
+});
+
+//将访问总数和明细+1
+firebase.child("sum").transaction(function(curCnt){
+    return (curCnt || 0) + 1;
+});
+
+firebase.child("page/" + curUrl).transaction(function(curCnt){
+    return (curCnt || 0) + 1;
+});
+</script>
+
+
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"coderselftrain"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
